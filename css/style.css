@@ -240,20 +240,20 @@ a {
   }
 
   /* ------------------
-     Hero Section
+     Home Page
   ------------------ */
-  .hero {
-    padding: 4rem 0 3rem;
+  .home-hero {
+    padding: 5rem 0 4rem;
   }
 
-  .hero h1 {
-    font-size: 2rem;
-    line-height: 1.25;
+  .home-name {
+    font-size: 2.2rem;
+    line-height: 1.2;
   }
 
-  .hero p {
-    font-size: 0.95rem;
-    margin-top: 1rem;
+  .home-title {
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
   }
 
   /* ------------------
@@ -264,7 +264,7 @@ a {
   }
 
   h2 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   /* ------------------
@@ -311,6 +311,35 @@ a {
 
   .image-block {
     height: 260px;
+  }
+
+  /* ------------------
+     About Page
+  ------------------ */
+  .about {
+    padding: 4rem 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-image {
+    max-width: 280px;
+  }
+
+  .about-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .about-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
   }
 
   /* ------------------
