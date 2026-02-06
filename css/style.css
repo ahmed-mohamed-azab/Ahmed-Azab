@@ -130,4 +130,146 @@ a {
   background: #eee;
   margin-bottom: 2rem;
 }
+/* =====================================================
+   MOBILE REFINEMENT SYSTEM
+   Author: Ahmed Azab
+   Purpose: Clean, readable, architect-grade mobile layout
+===================================================== */
+
+@media (max-width: 768px) {
+
+  /* ------------------
+     Global
+  ------------------ */
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+
+  /* ------------------
+     Header
+  ------------------ */
+  .site-header {
+    padding: 0.5rem 0;
+  }
+
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .nav a {
+    margin: 0 1.5rem 0.5rem 0;
+    font-size: 0.85rem;
+  }
+
+  /* ------------------
+     Hero Section
+  ------------------ */
+  .hero {
+    padding: 4rem 0 3rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+  }
+
+  /* ------------------
+     Headings
+  ------------------ */
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  /* ------------------
+     Portfolio Grid
+  ------------------ */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-card h2 {
+    margin-top: 0.8rem;
+  }
+
+  .project-card p {
+    font-size: 0.8rem;
+  }
+
+  .thumb {
+    height: 200px;
+  }
+
+  /* ------------------
+     Project Page
+  ------------------ */
+  .project {
+    max-width: 100%;
+  }
+
+  .meta {
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-content p {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .image-block {
+    height: 260px;
+  }
+
+  /* ------------------
+     Photography Page
+  ------------------ */
+  .photo-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* ------------------
+     Footer
+  ------------------ */
+  .site-footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
+  }
+
+  .site-footer p {
+    font-size: 0.75rem;
+    text-align: left;
+  }
+
+}
 
