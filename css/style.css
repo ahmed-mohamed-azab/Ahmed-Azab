@@ -83,6 +83,27 @@ a {
   font-size: 0.8rem;
   color: var(--gray);
 }
+
+/* ==================
+   Home Page
+================== */
+.home-hero {
+  padding: 8rem 0 6rem;
+}
+
+.home-name {
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.home-title {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--gray);
+  max-width: 600px;
+}
+
 /* ------------------
    Portfolio Grid
 ------------------ */
