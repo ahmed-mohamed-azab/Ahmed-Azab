@@ -1,0 +1,85 @@
+/* ------------------
+   Variables
+------------------ */
+:root {
+  --black: #000;
+  --white: #fff;
+  --gray: #777;
+}
+
+/* ------------------
+   Base
+------------------ */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: var(--black);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ------------------
+   Layout
+------------------ */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* ------------------
+   Header
+------------------ */
+.site-header {
+  border-bottom: 1px solid #eee;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+}
+
+.nav a {
+  margin-left: 2rem;
+  font-size: 0.9rem;
+}
+
+/* ------------------
+   Hero
+------------------ */
+.hero {
+  padding: 6rem 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.hero p {
+  margin-top: 1rem;
+  color: var(--gray);
+  max-width: 600px;
+}
+
+/* ------------------
+   Footer
+------------------ */
+.site-footer {
+  border-top: 1px solid #eee;
+  margin-top: 6rem;
+}
+
+.site-footer p {
+  font-size: 0.8rem;
+  color: var(--gray);
+}
