@@ -165,8 +165,11 @@ a {
 /* ==================
    Project Page
 ================== */
+
+/* Main project wrapper */
 .project {
-  max-width: 800px;
+  max-width: 1000px;          /* wider canvas */
+  margin: 0 auto;             /* CENTER PAGE */
 }
 
 /* Meta text */
@@ -175,9 +178,32 @@ a {
   margin-bottom: 3rem;
 }
 
+/* Paragraphs */
 .project-content p {
   margin-bottom: 2rem;
 }
+
+/* ---- PROJECT IMAGES LAYOUT ---- */
+
+/* Image container */
+.project-images {
+  max-width: 820px;           /* controls image column */
+  margin: 4rem auto;          /* CENTER container + vertical space */
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;                  /* BIG gutter between images */
+}
+
+/* ALL project images */
+.project-images img {
+  width: 100%;
+  height: auto;               /* NATURAL HEIGHT */
+  max-height: 520px;          /* prevents screen takeover */
+  object-fit: contain;        /* NO CROPPING */
+  display: block;
+  margin: 0 auto;             /* CENTER image */
+}
+
 
 /* --- PROJECT IMAGES SYSTEM --- */
 
@@ -276,18 +302,21 @@ a {
   /* Project Page — MOBILE */
 
   .project {
-    max-width: 100%;
-  }
+  max-width: 100%;
+}
 
-  .meta {
-    font-size: 0.85rem;
-    margin-bottom: 2rem;
-  }
+.project-images {
+  max-width: 100%;
+  margin: 3rem auto;
+  gap: 2.5rem;
+}
 
-  .project-content p {
-    font-size: 0.95rem;
-    margin-bottom: 2rem;
-  }
+.project-images img {
+  height: auto;          /* IMPORTANT */
+  max-height: 300px;
+  object-fit: contain;   /* NO CROP */
+  margin: 0 auto;
+}
 
   /* HERO IMAGE (mobile) */
   .project-images img:first-child {
