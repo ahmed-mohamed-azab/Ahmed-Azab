@@ -375,7 +375,7 @@ a {
 }
 
 /* =====================================================
-   ABOUT PAGE – MOBILE ONLY (≤ 767px)
+   ABOUT PAGE – MOBILE FIX (≤ 767px)
 ===================================================== */
 @media (max-width: 767px) {
 
@@ -383,13 +383,14 @@ a {
     padding: 4rem 0;
   }
 
-  /* Keep grid, change behavior */
+  /* Mobile grid: image + intro, then full-width body */
   .about-grid {
+    display: grid;
     grid-template-columns: auto 1fr;
     gap: 1.5rem;
   }
 
-  /* Bigger image on mobile */
+  /* Image (bigger, left) */
   .about-image {
     max-width: 150px;
   }
@@ -400,26 +401,31 @@ a {
     display: block;
   }
 
+  /* CRITICAL FIX:
+     Flatten content so children become grid items */
+  .about-content {
+    display: contents;
+  }
+
   /* Name + title beside image */
   .about-intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 0;
   }
 
-  /* Body text goes full width BELOW */
+  /* Body text goes FULL WIDTH below */
   .about-body {
     grid-column: 1 / -1;
     margin-top: 2.5rem;
   }
 
-  /* Paragraph spacing for readability */
+  /* Paragraph spacing */
   .about-content p {
     margin-bottom: 1.25rem;
   }
 
-  /* Slightly smaller name on small screens */
+  /* Slightly scale text for mobile */
   .about-content h1 {
     font-size: 1.8rem;
   }
@@ -428,6 +434,7 @@ a {
     font-size: 0.95rem;
   }
 }
+
 
 
 
