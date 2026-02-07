@@ -115,21 +115,21 @@ a {
 
 /* Typography – applies everywhere */
 .about-content h1 {
-  font-size: 2.4rem;
+  font-size: 5.5rem;
   font-weight: 700;
   line-height: 1.15;
   margin: 0;
 }
 
 .about-subtitle {
-  font-size: 1.05rem;
+  font-size: 2.5rem;
   font-weight: 400;
   color: #777;
   margin-top: 0.4rem;
 }
 
 .about-content h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin: 3rem 0 1rem;
 }
