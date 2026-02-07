@@ -137,14 +137,12 @@ a {
   margin-top: 4rem;
 }
 
-.project-card h2 {
-  font-size: 1.1rem;
-  margin-top: 1rem;
-}
-
-.project-card p {
-  font-size: 0.85rem;
-  color: var(--gray);
+/* Project card */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 /* Portfolio cover images ONLY */
@@ -156,7 +154,96 @@ a {
   object-fit: cover;
   display: block;
   background: #eee;
+  transition: opacity 0.4s ease;
+  position: relative;
+  z-index: 1;
 }
+
+/* Overlay */
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+/* Hide title & subtitle by default */
+.project-card h2,
+.project-card p {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 3;
+}
+
+/* Title */
+.project-card h2 {
+  font-size: 1.3rem;
+  font-
+
+
+/* Title style */
+.project-card h2 {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transform: translateY(10px);
+}
+
+/* Subtitle style */
+.project-card p {
+  color: #ddd;
+  font-size: 0.9rem;
+  margin-top: 2.5rem;
+  transform: translateY(10px);
+}
+
+/* Overlay using ::after */
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Portfolio cover images ONLY */
+.thumb,
+.project-thumb,
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  background: #eee;
+  transition: opacity 0.4s ease;
+}
+
+/* Hover effects */
+.project-card:hover img {
+  opacity: 0.35;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+
+.project-card:hover h2,
+.project-card:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* ==================
    Project Page — FINAL HERO SOLUTION
