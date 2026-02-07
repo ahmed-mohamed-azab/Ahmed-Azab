@@ -284,39 +284,47 @@ a {
 }
 
 /* =========================
-   LITE YOUTUBE EMBED
+   LITE YOUTUBE EMBED – FIXED
 ========================= */
 
 .lite-yt {
   position: relative;
   width: 100%;
-  padding-top: 56.25%;
-  background: #000;
+  padding-top: 56.25%; /* 16:9 */
+  background-color: #000;
   cursor: pointer;
   overflow: hidden;
 }
 
-/* Thumbnail */
-.lite-yt::before {
-  content: "";
+/* Thumbnail image (set via JS) */
+.lite-yt .yt-thumb {
   position: absolute;
   inset: 0;
-  background-image: url("https://i.ytimg.com/vi/--gTBfhW2v0/hqdefault.jpg");
   background-size: cover;
   background-position: center;
 }
 
 /* Play button */
-.lite-yt::after {
-  content: "▶";
+.lite-yt .yt-play {
   position: absolute;
   inset: 0;
   display: grid;
   place-items: center;
   font-size: 4rem;
   color: white;
-  opacity: 0.9;
+  pointer-events: none;
 }
+
+/* Once activated, remove overlays */
+.lite-yt.active {
+  cursor: default;
+}
+
+.lite-yt.active .yt-thumb,
+.lite-yt.active .yt-play {
+  display: none;
+}
+
 
 
 
