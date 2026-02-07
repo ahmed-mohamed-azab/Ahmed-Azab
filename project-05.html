@@ -13,11 +13,33 @@
 <header class="site-header">
   <div class="container">
     <a href="index.html" class="logo">Ahmed Azab</a>
+
+    <!-- Hamburger button (mobile only) -->
+    <button class="menu-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Desktop nav (hidden on mobile) -->
     <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
       <a href="portfolio.html">Portfolio</a>
     </nav>
   </div>
 </header>
+
+<!-- Mobile fullscreen menu -->
+<div class="mobile-menu">
+  <button class="menu-close" aria-label="Close menu">×</button>
+
+  <nav class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html">Portfolio</a>
+  </nav>
+</div>
 
 <main>
   <section class="project">
@@ -44,6 +66,8 @@
     <p>© 2026 Ahmed Azab</p>
   </div>
 </footer>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>

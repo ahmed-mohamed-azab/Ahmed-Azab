@@ -494,6 +494,24 @@ a {
   }
 }
 
+/* =====================================================
+   PROJECT PAGE – MOBILE FIXES
+===================================================== */
+@media (max-width: 767px) {
+
+  /* Fix oversized project title */
+  .project h1 {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  /* Fix oversized first image on mobile */
+  .project-images img:first-child {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
 
 
 /* =========================
@@ -521,6 +539,20 @@ a {
 /* Never allow overlays to catch taps */
 .portfolio-grid .project-card::after {
   pointer-events: none;
+}
+
+/* =========================
+   MOBILE MENU CLICK FIX (REAL FIX)
+========================= */
+
+/* When menu is hidden, it must NOT block clicks */
+.mobile-menu {
+  pointer-events: none;
+}
+
+/* When menu is open, allow interaction */
+.mobile-menu.active {
+  pointer-events: auto;
 }
 
 
