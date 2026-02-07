@@ -7,34 +7,6 @@
   --gray: #777;
 }
 
-/* =====================================================
-   FORCE LIGHT MODE – ALL DEVICES (ANDROID SAFE)
-===================================================== */
-
-:root {
-  color-scheme: light;
-}
-
-/* Base colors */
-html {
-  background-color: #ffffff;
-  forced-color-adjust: none;
-}
-
-body {
-  background-color: #ffffff !important;
-  color: #000000 !important;
-}
-
-/* Override system dark mode explicitly */
-@media (prefers-color-scheme: dark) {
-  html,
-  body {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-  }
-}
-
 
 /* ------------------
    Layout
