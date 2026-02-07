@@ -238,28 +238,117 @@ a {
 }
 
 
+/* Desktop only */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+
 /* =====================================================
-   MOBILE
+   MOBILE FIXES (≤ 767px)
 ===================================================== */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
   body {
     font-size: 15px;
   }
 
   .container {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
-  .site-header {
-    padding: 0.5rem 0;
-  }
-
+  /* ---------- Header ---------- */
   .site-header .container {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.75rem;
   }
 
   .logo {
     font-size: 1rem;
-    margi
+  }
+
+  .nav {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  .nav a {
+    margin-left: 0;
+    font-size: 0.9rem;
+  }
+
+  /* ---------- Home Hero ---------- */
+  .home-hero {
+    padding: 4rem 0 3rem;
+  }
+
+  .home-name {
+    font-size: 2.4rem;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  .home-title {
+    font-size: 1rem;
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+/* =====================================================
+   MOBILE NAV (≤ 767px)
+===================================================== */
+@media (max-width: 767px) {
+
+  /* Hide normal nav */
+  .nav {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* Show nav when active */
+  .nav.active {
+    display: flex;
+  }
+
+  /* Three dots button */
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: auto;
+  }
+}
+
+
+/* =====================================================
+   TABLET FIXES (768px – 1024px)
+===================================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .container {
+    padding: 2rem;
+  }
+
+  .home-hero {
+    padding: 6rem 0 4rem;
+  }
+
+  .home-name {
+    font-size: 3.2rem;
+  }
+
+  .home-title {
+    font-size: 1.3rem;
+    max-width: 520px;
+  }
+}
+
