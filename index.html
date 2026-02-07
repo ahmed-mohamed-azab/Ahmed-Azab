@@ -15,11 +15,14 @@
   <div class="container">
     <a href="index.html" class="logo">Ahmed Azab</a>
 
-    <!-- Mobile menu button -->
+    <!-- Hamburger button (mobile only) -->
     <button class="menu-toggle" aria-label="Open menu">
-      ⋮
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
+    <!-- Desktop nav (hidden on mobile) -->
     <nav class="nav">
       <a href="about.html">About</a>
       <a href="portfolio.html">Portfolio</a>
@@ -27,6 +30,20 @@
     </nav>
   </div>
 </header>
+
+<!-- Mobile fullscreen menu -->
+<div class="mobile-menu">
+  <button class="menu-close" aria-label="Close menu">×</button>
+
+  <nav class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="photography.html">Photography</a>
+  </nav>
+</div>
+
+
 
 
   <!-- Main -->

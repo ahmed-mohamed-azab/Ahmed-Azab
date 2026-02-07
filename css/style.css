@@ -238,18 +238,13 @@ a {
 }
 
 
-/* Desktop only */
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-}
+
 
 
 /* =====================================================
-   MOBILE FIXES (≤ 767px)
+   MOBILE & TABLET FIXES (≤ 1024px)
 ===================================================== */
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
 
   body {
     font-size: 15px;
@@ -261,23 +256,37 @@ a {
 
   /* ---------- Header ---------- */
   .site-header .container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .logo {
     font-size: 1rem;
   }
 
+  /* Hide desktop nav */
   .nav {
-    display: flex;
-    gap: 1.25rem;
+    display: none;
   }
 
-  .nav a {
-    margin-left: 0;
-    font-size: 0.9rem;
+  /* ---------- Hamburger Button ---------- */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .menu-toggle span {
+    width: 26px;
+    height: 2px;
+    background: #000;
+    display: block;
   }
 
   /* ---------- Home Hero ---------- */
@@ -296,59 +305,53 @@ a {
     max-width: 100%;
     margin-top: 1rem;
   }
-}
 
-/* =====================================================
-   MOBILE NAV (≤ 767px)
-===================================================== */
-@media (max-width: 767px) {
-
-  /* Hide normal nav */
-  .nav {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-  /* Show nav when active */
-  .nav.active {
+  /* ---------- Fullscreen Mobile Menu ---------- */
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
     display: flex;
+    flex-direction: column;
   }
 
-  /* Three dots button */
-  .menu-toggle {
-    display: block;
+  .mobile-menu.active {
+    transform: translateX(0);
+  }
+
+  /* Close (X) button */
+  .menu-close {
+    font-size: 2rem;
     background: none;
     border: none;
-    font-size: 1.5rem;
     cursor: pointer;
-    margin-left: auto;
+    align-self: flex-end;
+    margin: 2rem;
+  }
+
+  /* Menu links */
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+  }
+
+  .mobile-nav a {
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+    border-top: 1px solid #eee;
   }
 }
-
 
 /* =====================================================
-   TABLET FIXES (768px – 1024px)
+   DESKTOP SAFETY (≥ 1025px)
 ===================================================== */
-@media (min-width: 768px) and (max-width: 1024px) {
-
-  .container {
-    padding: 2rem;
-  }
-
-  .home-hero {
-    padding: 6rem 0 4rem;
-  }
-
-  .home-name {
-    font-size: 3.2rem;
-  }
-
-  .home-title {
-    font-size: 1.3rem;
-    max-width: 520px;
+@media (min-width: 1025px) {
+  .menu-toggle,
+  .mobile-menu {
+    display: none;
   }
 }
-
